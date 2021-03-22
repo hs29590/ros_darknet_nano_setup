@@ -4,11 +4,12 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
 sudo apt update
 sudo apt install ros-melodic-desktop-full
-echo "export PATH=$PATH:/usr/local/cuda-10.2/bin" >> ~/.bashrc"
-echo "export CUDADIR=/usr/local/cuda-10.2" >> ~/.bashrc"
-echo "export LD_LIBRARY_PATH=$LD_LIBRARY:/usr/local/cuda-10.2/lib64" >> ~/.bashrc"
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc"
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc"
+
+echo "export PATH=/usr/local/cuda-10.2/bin\${PATH:+:\${PATH}}" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}" >> ~/.bashrc
+
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
 sudo apt install python-rosdep
