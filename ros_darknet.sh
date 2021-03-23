@@ -6,7 +6,7 @@ sudo apt update
 sudo apt install ros-melodic-desktop-full
 
 echo "export PATH=/usr/local/cuda-10.2/bin\${PATH:+:\${PATH}}" >> ~/.bashrc
-echo "export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}" >> ~/.bashrc
 
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
