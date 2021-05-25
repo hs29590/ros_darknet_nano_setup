@@ -45,4 +45,5 @@ cd
 #to add partial-up arrow search for easy programming / terminal commands
 echo "bind '\"\e[A\": history-search-backward'" >> ~/.bashrc
 echo "bind '\"\e[B\": history-search-forward'" >> ~/.bashrc
+sudo apt-get install vim
 #clone robro-cloud cosmetic-counting robro-socket
