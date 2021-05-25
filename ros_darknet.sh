@@ -46,4 +46,5 @@ cd
 echo "bind '\"\e[A\": history-search-backward'" >> ~/.bashrc
 echo "bind '\"\e[B\": history-search-forward'" >> ~/.bashrc
 sudo apt-get install vim
+sudo apt-get install ros-melodic-image-transport-plugins
 #clone robro-cloud cosmetic-counting robro-socket
