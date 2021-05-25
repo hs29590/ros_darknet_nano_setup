@@ -45,6 +45,12 @@ cd
 #to add partial-up arrow search for easy programming / terminal commands
 echo "bind '\"\e[A\": history-search-backward'" >> ~/.bashrc
 echo "bind '\"\e[B\": history-search-forward'" >> ~/.bashrc
+
+# For easy editing
 sudo apt-get install vim
+
+# For Web Plugins / and http based GUI
+sudo apt-get install ros-melodic-rosbridge-server 
+
+# For GUI Compressed Images
 sudo apt-get install ros-melodic-image-transport-plugins
-#clone robro-cloud cosmetic-counting robro-socket
