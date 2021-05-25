@@ -36,4 +36,13 @@ cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make package
 sudo dpkg -i darkhelp-*.deb
+cd /usr/include/
+
+#to link opencv4 and regular opencv
+sudo ln -s opencv4 opencv
+cd
+
+#to add partial-up arrow search for easy programming / terminal commands
+echo "bind '\"\e[A\": history-search-backward'" >> ~/.bashrc
+echo "bind '\"\e[B\": history-search-forward'" >> ~/.bashrc
 #clone robro-cloud cosmetic-counting robro-socket
