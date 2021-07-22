@@ -20,9 +20,9 @@ cd
 source ~/.bashrc
 sudo apt-get install git
 git clone https://github.com/AlexeyAB/darknet.git
-git clone https://github.com/hs29590/darknet-makefile
-cp darknet-makefile/Makefile darknet/
 cd darknet
+#open MakeFile
+#Make "GPU: 1, OpenMP: 1, libso: 1, OpenMP: 1, CUDNN: 1, or as per system config"
 make
 sudo cp libdarknet.so /usr/local/lib/
 sudo cp include/darknet.h /usr/local/include/
@@ -41,8 +41,8 @@ cd /usr/include/
 #to link opencv4 and regular opencv
 sudo ln -s opencv4 opencv
 cd
-
 #to add partial-up arrow search for easy programming / terminal commands
+
 echo "bind '\"\e[A\": history-search-backward'" >> ~/.bashrc
 echo "bind '\"\e[B\": history-search-forward'" >> ~/.bashrc
 
