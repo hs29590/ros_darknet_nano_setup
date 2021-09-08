@@ -3,7 +3,12 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
 sudo apt update
+# install if ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception needed
 sudo apt install ros-melodic-desktop-full
+# install if ROS, rqt, rviz, and robot-generic libraries
+sudo apt install ros-melodic-desktop
+# install if ROS package, build, and communication libraries. No GUI tools. use this for kiara
+sudo apt install ros-melodic-ros-base
 
 echo "export PATH=/usr/local/cuda-10.2/bin\${PATH:+:\${PATH}}" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}" >> ~/.bashrc
@@ -38,3 +43,5 @@ make
 make package
 sudo dpkg -i darkhelp-*.deb
 #clone robro-cloud cosmetic-counting robro-socket
+# if there is problem with opencv please visit here
+# https://answers.ros.org/question/347754/jetson-nano-comes-with-opencv-411-do-i-need-to-downgrade-to-32-for-melodic/
